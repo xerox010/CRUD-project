@@ -19,9 +19,9 @@
         @endif
     </div>
 
-    <form method="post" action=" ">
+    <form method="post" action="{{route('product.update', ['product' => $product])}}">
         @csrf
-        @method('post')
+        @method('put')
         <div>
             <label >Name</label>
             <input type="name" name="name" placeholder="name" value="{{$product->name}}"/>
@@ -36,7 +36,7 @@
         </div>
         <div>
             <label >Description</label>
-            <input type="text" name="description" placeholder="Description" value="{{$product->desctiption}}"/>
+            <input type="text" name="description" placeholder="Description" value="{{$product->description}}"/>
         </div>
 
         <div>
